@@ -25,44 +25,104 @@ Execute the necessary commands/batch file for the desired output.
 
 # WINDOWS COMMANDS:
 ## Exercise 1: Basic Directory and File Operations
-Create a directory named "MyLab" on the desktop.
+Create a directory named "My-folder" on the desktop.
 
 
 ## COMMAND AND OUTPUT
+```
+mkdir my-folder
+```
+![img](./img/Screenshot%202025-05-15%20182359.png)
 
-Change to the "MyLab" directory and create an empty text file named "MyFile.txt" inside it.
+## COMMAND AND OUTPUT
+```
+rmdir my-folder
+```
+![img](./img/Screenshot%202025-05-15%20182452.png)
+
+## COMMAND AND OUTPUT
+```
+COPY CON Rose.txt
+```
+A clock in a office can never get stolen
+Too many employees watch it all the time
+^Z
+1 file(s) copied
+```
+dir Rose.txt
+```
+![img](./img/Screenshot%202025-05-15%20182616.png)
+
+## COMMAND AND OUTPUT
+```
+echo “hello world” > hello.txt
+type hello.txt
+```
+![img](./img/Screenshot%202025-05-15%20182725.png)
 
 
 ## COMMAND AND OUTPUT
-
-List the contents of the "MyLab" directory.
-
-
-## COMMAND AND OUTPUT
-
-Copy "MyFile.txt" to a new folder named "Backup" on the desktop.
-
-## COMMAND AND OUTPUT
-
-Move the "MyLab" directory to the "Documents" folder.
+```
+copy hello.txt hello1.txt
+```
+![img](./img/Screenshot%202025-05-15%20182831.png)
 
 
 ## COMMAND AND OUTPUT
+```
+del hello1.txt
+dir hello1.txt
+```
+![img](./img/Screenshot%202025-05-15%20182917.png)
 
+## COMMAND AND OUTPUT
+```
+assoc | more
+```
+![img](./img/Screenshot%202025-05-15%20182956.png)
 
-## Exercise 2: Advanced Batch Scripting
-Create a batch script named "BackupScript.bat" that creates a backup of files with the ".docx" extension from the "Documents" folder to a new folder named "DocBackup" on the desktop.
+## COMMAND AND OUTPUT
+```
+fc hello.txt Rose.txt
+```
+![img](./img/Screenshot%202025-05-15%20183038.png)
 
+## COMMAND AND OUTPUT
 
+Open Notepad with filename 1.bat and type the following batch scrip
+```
+    @echo off
+    set name=John
+    echo Hello, %name%!
+    pause
+```
+![img](./img/Screenshot%202025-05-15%20183258.png)
 
+## COMMAND AND OUTPUT
 
-
-
-
-## OUTPUT
-
-
-
+Open Notepad with filename 2.bat and type the following and execute 2.bat
+```
+    @echo off
+    :main
+    set /p number=Enter a number: 
+    rem Calculate remainder when divided by 2
+    set /a remainder=%number% %% 2
+    if %remainder%==1 (
+        echo %number% is an odd number.
+    ) else (
+        echo %number% is not an odd number.
+    )
+    :choice
+    set /p continue=Do you want to check another number? (Y/N): 
+    if /i "%continue%"=="Y" goto main
+    if /i "%continue%"=="N" goto end
+    echo Invalid choice, please enter Y or N.
+    goto choice
+    :end
+    echo Thank you for using the odd number checker!
+    pause
+```
+![img](./img/Screenshot%202025-05-15%20183452.png)
 
 
 # RESULT:
